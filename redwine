@@ -1,0 +1,140 @@
+SEABORN VISUALIZATION REDWINEQUALITY.
+
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+
+
+
+data.shape
+
+data.columns
+
+data.describe()
+
+data.info()
+
+
+
+fig, ax = plt.subplots(ncols=6, nrows=2, figsize=(20,10))
+index=0
+ax=ax.flatten()
+for col, value in data.items():
+  sns.distplot(value, ax=ax[index])
+  index += 1
+plt.tight_layout(pad=0.5, w_pad=0.7, h_pad=5.0)
+
+
+
+
+
+
+fig, ax = plt.subplots(ncols=6, nrows=2, figsize=(20,10))
+index=0
+ax=ax.flatten()
+for col, value in data.items():
+  sns.distplot(value, ax=ax[index])
+  index += 1
+plt.tight_layout(pad=0.5, w_pad=0.7, h_pad=5.0)
+
+
+fig, ax = plt.subplots(ncols=6, nrows=2, figsize=(20,10))
+index=0
+ax=ax.flatten()
+for col, value in data.items():
+  sns.histplot(value, ax=ax[index])
+  index += 1
+plt.tight_layout(pad=0.5, w_pad=0.7, h_pad=5.0)
+
+
+
+
+ fig, ax = plt.subplots(ncols=6, nrows=2, figsize=(20,10))
+index=0
+ax=ax.flatten()
+for col, value in data.items():
+  sns.countplot(value, ax=ax[index])
+  index += 1
+plt.tight_layout(pad=0.5, w_pad=0.7, h_pad=5.0)
+
+
+fig, ax = plt.subplots(ncols=6, nrows=2, figsize=(20,10))
+index=0
+ax=ax.flatten()
+for col, value in data.items():
+  sns.barplot(value, ax=ax[index])
+  index += 1
+
+
+
+fig, ax = plt.subplots(ncols=6, nrows=2, figsize=(20,10))
+index=0
+ax=ax.flatten()
+for col, value in data.items():
+  sns.boxplot(value, ax=ax[index])
+  index += 1
+plt.tight_layout(pad=0.5, w_pad=0.7, h_pad=5.0)
+
+
+ sns.pairplot(data)
+
+fig, ax = plt.subplots(ncols=6, nrows=2, figsize=(20,10))
+index=0
+ax=ax.flatten()
+for col, value in data.items():
+  sns.barplot(y=data[col],x = data['quality'], data = data,ax=ax[index])
+  index += 1
+plt.tight_layout(pad=0.5, w_pad=0.7, h_pad=5.0)
+
+
+
+fig, ax = plt.subplots(ncols=6, nrows=2, figsize=(20,10))
+index=0
+ax=ax.flatten()
+for col, value in data.items():
+  sns.lineplot(value, ax=ax[index])
+  index += 1
+plt.tight_layout(pad=0.5, w_pad=0.7, h_pad=5.0)
+
+
+j= data.corr()
+sns.heatmap(j, annot=True)
+plt.figure(figsize=(60,60))
+plt.show()
+
+
+fig, ax = plt.subplots(ncols=6, nrows=2, figsize=(20,10))
+index=0
+ax=ax.flatten()
+for col, value in data.items():
+  sns.lineplot(y=data[col],x = data['quality'], data = data,ax=ax[index])
+  index += 1
+plt.tight_layout(pad=0.5, w_pad=0.7, h_pad=5.0)
+
+
+fig, ax = plt.subplots(ncols=6, nrows=2, figsize=(20,10))
+index=0
+ax=ax.flatten()
+for col, value in data.items():
+  sns.relplot(y=data[col],x = data['quality'], data = data,ax=ax[index])
+  index += 1
+plt.tight_layout(pad=0.5, w_pad=0.7, h_pad=5.0)
+
+fig, ax = plt.subplots(ncols=6, nrows=2, figsize=(20,10))
+index=0
+ax=ax.flatten()
+for col, value in data.items():
+  sns.cataplot(y=data[col],x = data['quality'], data = data,ax=ax[index])
+  index += 1
+plt.tight_layout(pad=0.5, w_pad=0.7, h_pad=5.0)
